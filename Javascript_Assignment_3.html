@@ -1,0 +1,48 @@
+<html>
+    <body>
+
+        <h3>People With Name Starting With B:</h3>
+        <ul id="name-list"></ul>
+
+        <script>
+           const people = [
+            "Alice Anderson",
+            "Aaron Adams",
+            "Bella Brown",
+            "Brian Black",
+            "Cathy Carter",
+            "Charles Cooper",
+            "Diana Davis",
+            "Daniel Drake",
+            "Ella Evans", 
+            "Ethan Edwards", 
+            "Fiona Fisher", 
+            "Frank Foster", 
+            "Grace Green", 
+            "Gavin Gray", 
+            "Hannah Harris", 
+            "Henry Hill", 
+            "Isabella Ingram", 
+            "Ian Irving", 
+            "Jack Johnson", 
+            "Julia James" 
+            ];
+            
+            const letter = "B";
+
+            const result = people.filter((name) => {
+                return name.charAt(0) === letter;
+            });
+
+            console.log(result);
+
+            const namelist = document.getElementById("name-list");
+
+            result.forEach((name) => {
+                const li = document.createElement("li");
+                li.textContent= name;
+                namelist.appendChild(li);
+            })
+        </script>
+    </body>
+</html>
